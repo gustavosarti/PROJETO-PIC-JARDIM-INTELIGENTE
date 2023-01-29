@@ -9,15 +9,13 @@ LiquidCrystal lcd(2,3,4,5,6,9); // Pinos 2 e 3 para controle, pinos 4,5,6 e 9 pa
  
 int ValAnalogIn; // Introduz o valor analógico ao código
 
-void (*funcReset)() = 0;
+void (*funcReset)() = 0; // Funcao para resetar o arduino
  
 void setup() {
 lcd.begin(16,2); // Declara a quantidade de colunas e linhas do lcd
 Serial.begin(9600); // Declara o BaundRate em 9600
 Serial.println("Sistema de Irrigação Automatizado"); // Imprime a frase no monitor serial
 pinMode(pinoRele, OUTPUT); // Declara o pinoRele como Saída
-
-
 
 }
   
@@ -37,10 +35,7 @@ lcd.setCursor(0,1); // Altera a linha que será utilizada no lcd para os próxim
 lcd.print("Irrigando ..."); // Escreve no lcd a ação que está sendo realizada pelo sistema
 delay (500);
 
-//digitalWrite(12, HIGH);
-
-//lcd.clear(); // Limpa o que esta escrito no lcd
-funcReset();
+funcReset(); // Reseta o arduino
 
 }
  
@@ -48,18 +43,13 @@ else { // Se não ...
 Serial.println("Planta Irrigada ..."); // Imprime a frase no monitor serial
 digitalWrite(pinoRele, HIGH); // Altera o estado do pinoRele para nível alto e desliga a bomba
 
-//funcReset(); // Limpa o que esta escrito no lcd
-
 lcd.print(Porcento);
 lcd.print("% umido");
 lcd.setCursor(0,1);
 lcd.print("Irrigada ...");
 delay (500);
 
-//digitalWrite(12, HIGH);
-
-//lcd.clear();
-funcReset();
+funcReset(); // Reseta o arduino
 
 }
   
