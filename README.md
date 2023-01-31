@@ -11,4 +11,8 @@ Resumindo seu funcionamento, o sensor principal do projeto está relacionado com
 conferência do correto funcionamento do dispositivo.
 Explicação dos componentes: o relé tem como funcionalidade de uma chave ou interruptor para a parte elétrica do projeto, o potenciometro serve para diminuir ou aumentar o brilho do lcd, o sensor de umidade serve para medir a umidade do solo e mandar para o arduino, a bomba é utilizada para puxar a água do tanque e jogar para a planta, e o arduino vai linkar os dados e rodar o código, assim garantindo o funcionamento do programa.
 
+
+LINK vídeo do projeto: https://youtu.be/7F-RIVFB26o
+
+
 ![image](https://user-images.githubusercontent.com/102550275/215629419-183aa264-1cb7-4f29-958c-1ede3be4ff9b.png)
